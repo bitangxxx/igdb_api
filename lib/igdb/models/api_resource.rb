@@ -28,7 +28,7 @@ class Igdb::ApiResource < OpenStruct
     params = Hash.new.tap do |hash|
       hash['offset'] = opts[:offset] || 0
       hash['limit'] = opts[:limit] || 50
-      hash['order'] = opts[:order] || "created_at:desc"
+      hash['order'] = opts[:order] || nil
       hash['fields'] = '*'
     end
     build_collection(Igdb::Requester.get("#{self.path}", params), self.representer)
