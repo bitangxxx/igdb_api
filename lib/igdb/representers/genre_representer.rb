@@ -1,4 +1,5 @@
 module Igdb::GenreRepresenter
+  include Igdb::BaseRepresenter
 
   property :id
   property :name
